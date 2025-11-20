@@ -1,0 +1,117 @@
+﻿using EstateArchitect.Data;
+using EstateArchitect.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+
+namespace EstateArchitect.Pages
+{
+    public class GameModel : PageModel
+    {
+        private readonly AppDbContext _db;
+
+        public GameModel(AppDbContext db)
+        {
+            _db = db;
+        }
+
+        public decimal Balance { get; set; }
+        public int Round { get; set; }
+        public List<Property> ForSale { get; set; } = new();
+        public List<Property> Owned { get; set; } = new();
+        public List<Person> Offers { get; set; } = new();
+
+        public async Task OnGet()
+        {
+            var state = await _db.GameStates.FirstAsync();
+            Balance = state.Balance;
+            Round = state.CurrentRound;
+            ForSale = await _db.Properties.Where(p => p.Status == EstateStatus.ForSale).OrderByDescending(p => p.ListedOn).Take(30).ToListAsync();
+            Owned = await _db.Properties.Where(p => p.IsOwnedByPlayer).OrderBy(p => p.Id).ToListAsync();
+            Offers = await _db.People.Where(p => p.IsActive).OrderByDescending(p => p.Id).Take(20).ToListAsync();
+        }
+
+        public async Task<IActionResult> OnPostBuyAsync(int id)
+        {
+            var state = await _db.GameStates.FirstAsync();
+            var prop = await _db.Properties.FindAsync(id);
+            if (prop == null || prop.Status != EstateStatus.ForSale) return RedirectToPage();
+            if (state.Balance < prop.Price) return RedirectToPage();
+
+            state.Balance -= prop.Price;
+            prop.IsOwnedByPlayer = true;
+            prop.Status = EstateStatus.Owned;
+
+            await _db.SaveChangesAsync();
+            return RedirectToPage();
+        }
+
+        public async Task<IActionResult> OnPostRenovateAsync(int id)
+        {
+            var state = await _db.GameStates.FirstAsync();
+            var prop = await _db.Properties.FindAsync(id);
+            if (prop == null || !prop.IsOwnedByPlayer) return RedirectToPage();
+            if (state.Balance < 5) return RedirectToPage();
+
+            state.Balance -= 5;
+            prop.RenovationLevel += 1;
+            await _db.SaveChangesAsync();
+            return RedirectToPage();
+        }
+
+        public async Task<IActionResult> OnPostSellAsync(int id, int propertyId)
+        {
+            var state = await _db.GameStates.FirstAsync();
+            var offer = await _db.People.FindAsync(id);
+            var prop = await _db.Properties.FindAsync(propertyId);
+            if (offer == null || prop == null) return RedirectToPage();
+            if (offer.Type != PersonType.Buyer) return RedirectToPage();
+            if (!prop.IsOwnedByPlayer || prop.Status != EstateStatus.Owned) return RedirectToPage();
+            if (prop.County != offer.DesiredCounty || prop.Type != offer.DesiredType || prop.Safety != offer.DesiredSafety) return RedirectToPage();
+
+            // sell
+            state.Balance += offer.OfferAmount;
+            prop.IsOwnedByPlayer = false;
+            prop.Status = EstateStatus.ForSale;
+            offer.IsActive = false;
+
+            await _db.SaveChangesAsync();
+            return RedirectToPage();
+        }
+
+        public async Task<IActionResult> OnPostRentAsync(int id, int propertyId, int duration)
+        {
+            var state = await _db.GameStates.FirstAsync();
+            var offer = await _db.People.FindAsync(id);
+            var prop = await _db.Properties.FindAsync(propertyId);
+            if (offer == null || prop == null) return RedirectToPage();
+            if (offer.Type != PersonType.Tenant) return RedirectToPage();
+            if (!prop.IsOwnedByPlayer || prop.Status != EstateStatus.Owned) return RedirectToPage();
+            if (prop.County != offer.DesiredCounty || prop.Type != offer.DesiredType || prop.Safety != offer.DesiredSafety) return RedirectToPage();
+            if (!GameConstants.RentalDurations.Contains(duration)) return RedirectToPage();
+
+            var now = DateTime.UtcNow;
+            var contract = new RentalContract
+            {
+                PropertyId = prop.Id,
+                TenantId = offer.Id,
+                MonthlyRent = Math.Max(prop.MonthlyRent, offer.OfferAmount),
+                DurationMonths = duration,
+                StartDate = now,
+                EndDate = now.AddMonths(duration),
+                MonthsRemaining = duration,
+                LastRentPayment = now,
+                IsActive = true,
+                ChanceToLeave = 0.1 + new Random().NextDouble() * 0.1
+            };
+
+            prop.Status = EstateStatus.Rented;
+            prop.CurrentTenantId = offer.Id;
+            offer.IsActive = false;
+
+            _db.RentalContracts.Add(contract);
+            await _db.SaveChangesAsync();
+            return RedirectToPage();
+        }
+    }
+}

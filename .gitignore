@@ -1,0 +1,24 @@
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.log
+*.tmp
+*.DS_Store
+Thumbs.db
+
+# Rider / VS Code / VS
+.idea/
+.vscode/
+*.sln.iml
+
+# Local database
+estate.db
+*.db-shm
+*.db-wal
+
+# Build and publish outputs
+*.pubxml
+*.pubxml.user
+**/Properties/launchSettings.json

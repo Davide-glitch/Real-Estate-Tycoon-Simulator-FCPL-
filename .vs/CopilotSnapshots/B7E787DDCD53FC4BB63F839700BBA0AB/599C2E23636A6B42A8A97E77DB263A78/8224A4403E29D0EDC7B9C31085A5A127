@@ -1,0 +1,74 @@
+﻿using Microsoft.EntityFrameworkCore;
+using EstateArchitect.Data;
+using EstateArchitect.Models;
+using EstateArchitect.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+// Add Razor Pages (for simpler CRUD pages)
+builder.Services.AddRazorPages();
+
+// Configure EF Core Sqlite
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Background game engine service
+builder.Services.AddHostedService<GameEngineService>();
+
+var app = builder.Build();
+
+// Ensure database is created and seed some sample data on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
+
+    if (!db.Properties.Any())
+    {
+        db.Properties.AddRange(
+            new Property { Address = "123 Main St", City = "Springfield", Price = 350000, Bedrooms = 3, Bathrooms = 2, SquareFeet = 1800 },
+            new Property { Address = "45 Oak Ave", City = "Riverton", Price = 495000, Bedrooms = 4, Bathrooms = 3, SquareFeet = 2400 },
+            new Property { Address = "9 Lakeview Dr", City = "Lakeside", Price = 799000, Bedrooms = 5, Bathrooms = 4, SquareFeet = 3200 }
+        );
+        db.SaveChanges();
+    }
+
+    if (!db.GameStates.Any())
+    {
+        db.GameStates.Add(new GameState
+        {
+            Balance = 10000m,
+            CurrentRound = 1,
+            LastRoundTime = DateTime.UtcNow,
+            CreatedAt = DateTime.UtcNow
+        });
+        db.SaveChanges();
+    }
+}
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+// Map Razor Pages
+app.MapRazorPages();
+
+// Keep MVC route for existing HomeController views
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

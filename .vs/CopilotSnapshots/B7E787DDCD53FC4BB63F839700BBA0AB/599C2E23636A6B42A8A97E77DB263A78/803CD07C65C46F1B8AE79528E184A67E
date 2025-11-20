@@ -1,0 +1,224 @@
+﻿using EstateArchitect.Data;
+using EstateArchitect.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EstateArchitect.Services
+{
+    public class GameEngineService : BackgroundService
+    {
+        private readonly IServiceScopeFactory _scopeFactory;
+        private readonly ILogger<GameEngineService> _logger;
+        private static readonly Random _rand = new Random();
+
+        public GameEngineService(IServiceScopeFactory scopeFactory, ILogger<GameEngineService> logger)
+        {
+            _scopeFactory = scopeFactory;
+            _logger = logger;
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                try
+                {
+                    using var scope = _scopeFactory.CreateScope();
+                    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+                    var state = await db.GameStates.FirstOrDefaultAsync(stoppingToken);
+                    if (state == null)
+                    {
+                        state = new GameState();
+                        db.GameStates.Add(state);
+                        await db.SaveChangesAsync(stoppingToken);
+                    }
+
+                    await RunRoundAsync(db, state, stoppingToken);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error in game engine round");
+                }
+
+                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+            }
+        }
+
+        private async Task RunRoundAsync(AppDbContext db, GameState state, CancellationToken ct)
+        {
+            // Generate 5 estates
+            for (int i = 0; i < 5; i++)
+            {
+                var p = GenerateProperty();
+                db.Properties.Add(p);
+            }
+
+            // Generate 3 people
+            for (int i = 0; i < 3; i++)
+            {
+                var person = GeneratePerson(state.CurrentRound);
+                db.People.Add(person);
+            }
+
+            // Process active rental contracts monthly progression
+            var activeContracts = await db.RentalContracts
+                .Include(rc => rc.Property)
+                .Include(rc => rc.Tenant)
+                .Where(rc => rc.IsActive)
+                .ToListAsync(ct);
+
+            foreach (var rc in activeContracts)
+            {
+                // Pay rent once per round as a simplification for demo
+                state.Balance += rc.MonthlyRent;
+                rc.TotalMonthsStayed += 1;
+                rc.MonthsRemaining = Math.Max(0, rc.MonthsRemaining - 1);
+
+                // Early leave chance, reduced by renovation level
+                var adjustedLeaveChance = Math.Max(0.0, rc.ChanceToLeave - (rc.Property?.RenovationLevel ?? 0) * 0.05);
+                if (_rand.NextDouble() < adjustedLeaveChance)
+                {
+                    // Tenant leaves early
+                    rc.IsActive = false;
+                    if (rc.Property != null)
+                    {
+                        rc.Property.Status = EstateStatus.Owned;
+                        rc.Property.CurrentTenantId = null;
+                    }
+                }
+                else if (rc.MonthsRemaining <= 0)
+                {
+                    // Contract end: simple renewal rule based on safety and rent
+                    var renewChance = 0.2; // base 20%
+                    if (rc.Property?.Safety == SafetyLevel.Safe) renewChance += 0.3;
+                    if (rc.Property?.Safety == SafetyLevel.Moderate) renewChance += 0.15;
+                    renewChance += (rc.Property?.RenovationLevel ?? 0) * 0.05;
+                    if (rc.TotalMonthsStayed >= 24) renewChance += 0.1; // after 2 years
+
+                    if (_rand.NextDouble() < renewChance)
+                    {
+                        rc.MonthsRemaining = rc.DurationMonths;
+                        rc.EndDate = DateTime.UtcNow.AddMonths(rc.DurationMonths);
+                    }
+                    else
+                    {
+                        rc.IsActive = false;
+                        if (rc.Property != null)
+                        {
+                            rc.Property.Status = EstateStatus.Owned;
+                            rc.Property.CurrentTenantId = null;
+                        }
+                    }
+                }
+            }
+
+            state.CurrentRound += 1;
+            state.LastRoundTime = DateTime.UtcNow;
+
+            await db.SaveChangesAsync(ct);
+        }
+
+        private static Property GenerateProperty()
+        {
+            var county = GameConstants.Counties[_rand.Next(GameConstants.Counties.Length)];
+            var type = (EstateType)_rand.Next(Enum.GetValues(typeof(EstateType)).Length);
+            var location = (LocationType)_rand.Next(Enum.GetValues(typeof(LocationType)).Length);
+            var safety = (SafetyLevel)_rand.Next(Enum.GetValues(typeof(SafetyLevel)).Length);
+
+            decimal basePrice = type switch
+            {
+                EstateType.Apartment => 50000m,
+                EstateType.House => 150000m,
+                EstateType.Mansion => 500000m,
+                _ => 100000m
+            };
+
+            decimal locationMultiplier = location switch
+            {
+                LocationType.Center => 1.5m,
+                LocationType.AroundCity => 1.1m,
+                LocationType.OutsideCity => 0.8m,
+                _ => 1m
+            };
+
+            decimal safetyMultiplier = safety switch
+            {
+                SafetyLevel.Safe => 1.3m,
+                SafetyLevel.Moderate => 1.0m,
+                SafetyLevel.Risky => 0.7m,
+                _ => 1m
+            };
+
+            var price = basePrice * locationMultiplier * safetyMultiplier * (decimal)(1.0 + _rand.NextDouble() * 0.3);
+
+            return new Property
+            {
+                Address = $"{_rand.Next(1, 9999)} {_streetNames[_rand.Next(_streetNames.Length)]}",
+                City = _cities[_rand.Next(_cities.Length)],
+                Price = Math.Round(price, 0),
+                Bedrooms = _rand.Next(1, 6),
+                Bathrooms = _rand.Next(1, 4),
+                SquareFeet = _rand.Next(400, 5000),
+                County = county,
+                Type = type,
+                Location = location,
+                Safety = safety,
+                Status = EstateStatus.ForSale,
+                MonthlyRent = Math.Round(price * 0.008m, 0),
+                IsOwnedByPlayer = false
+            };
+        }
+
+        private static Person GeneratePerson(int round)
+        {
+            var county = GameConstants.Counties[_rand.Next(GameConstants.Counties.Length)];
+            var type = (EstateType)_rand.Next(Enum.GetValues(typeof(EstateType)).Length);
+            var safety = (SafetyLevel)_rand.Next(Enum.GetValues(typeof(SafetyLevel)).Length);
+            var isBuyer = _rand.NextDouble() < 0.5;
+
+            // Offers depend on type
+            decimal baseOffer = type switch
+            {
+                EstateType.Apartment => 60000m,
+                EstateType.House => 200000m,
+                EstateType.Mansion => 600000m,
+                _ => 100000m
+            };
+
+            var offer = baseOffer * (decimal)(0.9 + _rand.NextDouble() * 0.4);
+
+            var hasAlt = _rand.NextDouble() < 0.5;
+            SafetyLevel? altSafety = hasAlt ? (SafetyLevel?)((SafetyLevel)_rand.Next(Enum.GetValues(typeof(SafetyLevel)).Length)) : null;
+            var altAmount = hasAlt ? offer * (decimal)(0.9 + _rand.NextDouble() * 0.3) : 0m;
+
+            return new Person
+            {
+                Name = _names[_rand.Next(_names.Length)],
+                Type = isBuyer ? PersonType.Buyer : PersonType.Tenant,
+                DesiredCounty = county,
+                DesiredType = type,
+                DesiredSafety = safety,
+                OfferAmount = Math.Round(offer, 0),
+                HasAlternative = hasAlt,
+                AlternativeSafety = altSafety,
+                AlternativeAmount = Math.Round(altAmount, 0),
+                RoundNumber = round
+            };
+        }
+
+        private static readonly string[] _names = new[]
+        {
+            "Alex", "Sam", "Jordan", "Taylor", "Casey", "Riley", "Morgan", "Jamie", "Avery", "Cameron"
+        };
+
+        private static readonly string[] _streetNames = new[]
+        {
+            "Maple St", "Oak Ave", "Pine Rd", "Cedar Ln", "Elm St", "Birch Way", "Willow Dr", "Poplar Ct"
+        };
+
+        private static readonly string[] _cities = new[]
+        {
+            "Springfield", "Riverton", "Lakeside", "Hillview", "Fairview", "Brookfield"
+        };
+    }
+}

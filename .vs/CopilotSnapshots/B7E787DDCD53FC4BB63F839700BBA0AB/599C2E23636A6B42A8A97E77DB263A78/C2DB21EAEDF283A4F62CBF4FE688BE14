@@ -1,0 +1,143 @@
+﻿@page
+@model EstateArchitect.Pages.GameModel
+@{
+    ViewData["Title"] = "Real Estate Tycoon";
+}
+
+<h1>Real Estate Tycoon</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Account</h5>
+                <p class="card-text">Balance: <strong>@Model.Balance.ToString("C0")</strong></p>
+                <p class="card-text">Round: <strong>@Model.Round</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="alert alert-info">The game updates automatically every 10 seconds. Refresh to see new estates and offers.</div>
+    </div>
+</div>
+
+<h3>Available Estates (For Sale)</h3>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>County</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Safety</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.ForSale)
+        {
+            <tr>
+                <td>@p.County</td>
+                <td>@p.Type</td>
+                <td>@p.Location</td>
+                <td>@p.Safety</td>
+                <td>@p.Price.ToString("C0")</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="id" value="@p.Id" />
+                        <button formaction="?handler=Buy" class="btn btn-sm btn-primary">Buy</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Owned Estates</h3>
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th>County</th>
+            <th>Type</th>
+            <th>Safety</th>
+            <th>Rent</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.Owned)
+        {
+            <tr>
+                <td>@p.County</td>
+                <td>@p.Type</td>
+                <td>@p.Safety</td>
+                <td>@p.MonthlyRent.ToString("C0")</td>
+                <td>@p.Status</td>
+                <td>
+                    <form method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@p.Id" />
+                        <button formaction="?handler=Renovate" class="btn btn-sm btn-warning">Renovate (-$5)</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Offers (Buyers/Tenants)</h3>
+<table class="table table-sm table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>County</th>
+            <th>Desired</th>
+            <th>Offer</th>
+            <th>Alt</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model.Offers)
+        {
+            <tr>
+                <td>@o.Name</td>
+                <td>@o.Type</td>
+                <td>@o.DesiredCounty</td>
+                <td>@o.DesiredType / @o.DesiredSafety</td>
+                <td>@o.OfferAmount.ToString("C0")</td>
+                <td>
+                    @if (o.HasAlternative)
+                    {<text>@o.AlternativeSafety / @o.AlternativeAmount.ToString("C0")</text>}
+                </td>
+                <td>
+                    <form method="post" class="d-flex gap-1">
+                        <input type="hidden" name="id" value="@o.Id" />
+                        <select name="propertyId" class="form-select form-select-sm">
+                            <option value="">Select property</option>
+                            @foreach (var p in Model.Owned.Where(p => p.Status == EstateStatus.Owned && p.County == o.DesiredCounty && p.Type == o.DesiredType && p.Safety == o.DesiredSafety))
+                            {
+                                <option value="@p.Id">#@p.Id - @p.Type (@p.Safety)</option>
+                            }
+                        </select>
+                        @if (o.Type == PersonType.Buyer)
+                        {
+                            <button formaction="?handler=Sell" class="btn btn-sm btn-success">Sell</button>
+                        }
+                        else
+                        {
+                            <select name="duration" class="form-select form-select-sm">
+                                @foreach (var d in EstateArchitect.Models.GameConstants.RentalDurations)
+                                {
+                                    <option value="@d">@d mo</option>
+                                }
+                            </select>
+                            <button formaction="?handler=Rent" class="btn btn-sm btn-success">Rent</button>
+                        }
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

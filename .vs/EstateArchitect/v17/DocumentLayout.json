@@ -1,0 +1,501 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\estatearchitect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:estatearchitect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\models\\gameconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:models\\gameconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\services\\gameengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:services\\gameengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\game.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|c:\\users\\doubl\\onedrive\\desktop\\code 3rd year\\fcpl\\realestateagency\\davidestatearchitect\\pages\\game.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3730AF0-B091-440A-9B66-A030E7C19A67}|EstateArchitect.csproj|solutionrelative:pages\\game.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GameEngineService.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Services\\GameEngineService.cs",
+              "RelativeDocumentMoniker": "Services\\GameEngineService.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Services\\GameEngineService.cs",
+              "RelativeToolTip": "Services\\GameEngineService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:30:30.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GameConstants.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Models\\GameConstants.cs",
+              "RelativeDocumentMoniker": "Models\\GameConstants.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Models\\GameConstants.cs",
+              "RelativeToolTip": "Models\\GameConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:29:15.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAMBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:28:30.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-24T16:20:58.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-24T15:34:22.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "bootstrap-reboot.css",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-24T16:21:01.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bootstrap-utilities.css",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-24T16:21:02.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:05:44.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Game.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Game.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Game.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Game.cshtml",
+              "RelativeToolTip": "Pages\\Game.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T13:31:04.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Game.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Game.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Game.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Game.cshtml.cs",
+              "RelativeToolTip": "Pages\\Game.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:31:40.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Create.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Create.cshtml",
+              "RelativeToolTip": "Pages\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:08:50.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Models\\Property.cs",
+              "RelativeDocumentMoniker": "Models\\Property.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Models\\Property.cs",
+              "RelativeToolTip": "Models\\Property.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAMBcwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:06:46.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T15:48:52.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T15:48:49.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T15:34:01.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:14:41.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:08:30.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\Edit.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:09:21.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Details.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Details.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Details.cshtml",
+              "RelativeToolTip": "Pages\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:09:50.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:13:42.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:08:19.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:08:32.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-24T15:34:31.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:09:11.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:09:40.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T16:14:09.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:13:55.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\Pages\\Details.cshtml.cs",
+              "RelativeToolTip": "Pages\\Details.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:13:24.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EstateArchitect.csproj",
+              "DocumentMoniker": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\EstateArchitect.csproj",
+              "RelativeDocumentMoniker": "EstateArchitect.csproj",
+              "ToolTip": "C:\\Users\\doubl\\OneDrive\\Desktop\\Code 3rd Year\\FCPL\\RealEstateAgency\\DavidEstateArchitect\\EstateArchitect.csproj",
+              "RelativeToolTip": "EstateArchitect.csproj",
+              "ViewState": "AgIAABEAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-16T16:05:06.323Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

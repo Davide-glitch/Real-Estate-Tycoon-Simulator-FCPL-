@@ -1,0 +1,85 @@
+@page "/Properties"
+@model DavidEstateArchitect.Pages.IndexModel
+@{
+    ViewData["Title"] = "Properties";
+}
+
+<!-- Hero Section: match Home styling for consistent look -->
+<div class="hero-section text-white text-center py-4 mb-4"
+    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; position: relative; overflow: hidden;">
+    <div class="container py-4 position-relative">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-list-ul"></i> Browse Properties</h1>
+        <p class="lead mb-3 text-white-75">Add, edit, or remove properties in the database. Manage your portfolio or jump back to the game.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a class="btn btn-light btn-lg px-4 fw-bold" asp-page="/Game" style="border-radius: 12px;">
+                <i class="bi bi-joystick"></i> Play Tycoon
+            </a>
+            <a class="btn btn-outline-light btn-lg px-4 fw-bold" asp-page="/Statistics" style="border-radius: 12px; border-width: 2px;">
+                <i class="bi bi-bar-chart-line-fill"></i> View Statistics
+            </a>
+            <a class="btn btn-success btn-lg px-4 fw-bold" asp-page="Create" style="border-radius: 12px;">
+                <i class="bi bi-plus-circle"></i> Add Property
+            </a>
+        </div>
+    </div>
+</div>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-6">
+        <input type="text" name="q" value="@Model.q" class="form-control"
+            placeholder="Search by address, city, or county..." />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Search</button>
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-outline-secondary" asp-page="/Index"><i class="bi bi-x-circle"></i> Clear</a>
+    </div>
+    <div class="col-auto ms-auto">
+        <a class="btn btn-success" asp-page="Create"><i class="bi bi-plus-circle"></i> Add Property</a>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Model.q))
+    {
+        <div class="col-12"><small class="text-muted">Showing results for "@Model.q"</small></div>
+    }
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Beds</th>
+            <th>Baths</th>
+            <th>Sq Ft</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Properties)
+        {
+            <tr>
+                <td>@item.Address</td>
+                <td>@item.City</td>
+                <td>@item.Price.ToString("C0")</td>
+                <td>@item.Bedrooms</td>
+                <td>@item.Bathrooms</td>
+                <td>@item.SquareFeet</td>
+                <td>
+                    <a class="btn btn-sm btn-secondary" asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center mt-5">
+    <form method="post" asp-page-handler="ResetGame">
+        <button type="submit" class="btn btn-danger btn-lg">
+            <i class="bi bi-arrow-counterclockwise"></i> Reset Game
+        </button>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+﻿using EstateArchitect.Data;
+using EstateArchitect.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+
+namespace EstateArchitect.Pages
+{
+    public class IndexModel : PageModel
+    {
+        private readonly AppDbContext _db;
+        public IndexModel(AppDbContext db) => _db = db;
+
+        public IList<Property> Properties { get; set; } = new List<Property>();
+
+        public async Task OnGetAsync()
+        {
+            Properties = await _db.Properties.OrderByDescending(p => p.ListedOn).ToListAsync();
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@page "{id:int}"
+@model DavidEstateArchitect.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Property Details";
+}
+
+<h1>Property Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Property.Address, @Model.Property.City</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">@Model.Property.Price.ToString("C0")</h6>
+        <p class="card-text">
+            <strong>Beds:</strong> @Model.Property.Bedrooms |
+            <strong>Baths:</strong> @Model.Property.Bathrooms |
+            <strong>Sq Ft:</strong> @Model.Property.SquareFeet
+        </p>
+        <p class="card-text"><small class="text-muted">Listed: @Model.Property.ListedOn.ToShortDateString()</small></p>
+        <a asp-page="Edit" asp-route-id="@Model.Property.Id" class="btn btn-primary">Edit</a>
+        <a asp-page="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@page "{id:int}"
+@model EstateArchitect.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit Property";
+}
+
+<h1>Edit Property</h1>
+
+<form method="post" class="row g-3">
+    <input type="hidden" asp-for="Property.Id" />
+    <div class="col-md-6">
+        <label asp-for="Property.Address" class="form-label"></label>
+        <input asp-for="Property.Address" class="form-control" />
+        <span asp-validation-for="Property.Address" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Property.City" class="form-label"></label>
+        <input asp-for="Property.City" class="form-control" />
+        <span asp-validation-for="Property.City" class="text-danger"></span>
+    </div>
+    <div class="col-md-2">
+        <label asp-for="Property.Price" class="form-label"></label>
+        <input asp-for="Property.Price" class="form-control" />
+        <span asp-validation-for="Property.Price" class="text-danger"></span>
+    </div>
+    <div class="col-md-2">
+        <label asp-for="Property.Bedrooms" class="form-label"></label>
+        <input asp-for="Property.Bedrooms" class="form-control" />
+        <span asp-validation-for="Property.Bedrooms" class="text-danger"></span>
+    </div>
+    <div class="col-md-2">
+        <label asp-for="Property.Bathrooms" class="form-label"></label>
+        <input asp-for="Property.Bathrooms" class="form-control" />
+        <span asp-validation-for="Property.Bathrooms" class="text-danger"></span>
+    </div>
+    <div class="col-md-2">
+        <label asp-for="Property.SquareFeet" class="form-label"></label>
+        <input asp-for="Property.SquareFeet" class="form-control" />
+        <span asp-validation-for="Property.SquareFeet" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

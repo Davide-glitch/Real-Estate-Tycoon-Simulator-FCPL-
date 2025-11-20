@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model DavidEstateArchitect.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Delete Property";
+}
+
+<h1>Delete Property</h1>
+
+<div class="alert alert-warning">Are you sure you want to delete this property?</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Property.Address, @Model.Property.City</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">@Model.Property.Price.ToString("C0")</h6>
+        <p class="card-text">
+            <strong>Beds:</strong> @Model.Property.Bedrooms |
+            <strong>Baths:</strong> @Model.Property.Bathrooms |
+            <strong>Sq Ft:</strong> @Model.Property.SquareFeet
+        </p>
+    </div>
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Property.Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>

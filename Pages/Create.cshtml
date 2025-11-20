@@ -1,0 +1,104 @@
+@page
+@model DavidEstateArchitect.Pages.CreateModel
+@{
+    ViewData["Title"] = "Add Property";
+}
+
+<h1>Add Property</h1>
+
+<form method="post" class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="Property.Address" class="form-label"></label>
+        <input asp-for="Property.Address" class="form-control" />
+        <span asp-validation-for="Property.Address" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.City" class="form-label"></label>
+        <input asp-for="Property.City" class="form-control" />
+        <span asp-validation-for="Property.City" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.County" class="form-label">County</label>
+        <select asp-for="Property.County" class="form-select">
+            <option value="">Select county</option>
+            @foreach (var county in GameConstants.Counties)
+            {
+                <option value="@county">@county</option>
+            }
+        </select>
+        <span asp-validation-for="Property.County" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.Price" class="form-label"></label>
+        <input asp-for="Property.Price" class="form-control" type="number" step="100" min="0" />
+        <span asp-validation-for="Property.Price" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.Bedrooms" class="form-label"></label>
+        <input asp-for="Property.Bedrooms" class="form-control" type="number" min="0" />
+        <span asp-validation-for="Property.Bedrooms" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.Bathrooms" class="form-label"></label>
+        <input asp-for="Property.Bathrooms" class="form-control" type="number" min="0" step="0.5" />
+        <span asp-validation-for="Property.Bathrooms" class="text-danger"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="Property.SquareFeet" class="form-label"></label>
+        <input asp-for="Property.SquareFeet" class="form-control" type="number" min="0" step="50" />
+        <span asp-validation-for="Property.SquareFeet" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="Property.Type" class="form-label">Property Type</label>
+        <select asp-for="Property.Type" class="form-select">
+            @foreach (EstateType type in Enum.GetValues(typeof(EstateType)))
+            {
+                <option value="@type">@type</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Property.Location" class="form-label">Location</label>
+        <select asp-for="Property.Location" class="form-select">
+            @foreach (LocationType loc in Enum.GetValues(typeof(LocationType)))
+            {
+                <option value="@loc">@loc</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Property.Safety" class="form-label">Safety</label>
+        <select asp-for="Property.Safety" class="form-select">
+            @foreach (SafetyLevel level in Enum.GetValues(typeof(SafetyLevel)))
+            {
+                <option value="@level">@level</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="Property.MonthlyRent" class="form-label">Monthly Rent</label>
+        <input asp-for="Property.MonthlyRent" class="form-control" type="number" min="0" step="50" />
+        <span asp-validation-for="Property.MonthlyRent" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Property.MonthlyMaintenanceCost" class="form-label">Monthly Maintenance</label>
+        <input asp-for="Property.MonthlyMaintenanceCost" class="form-control" type="number" min="0" step="25" />
+        <span asp-validation-for="Property.MonthlyMaintenanceCost" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Property.MarketValue" class="form-label">Market Value</label>
+        <input asp-for="Property.MarketValue" class="form-control" type="number" min="0" step="100" />
+        <span asp-validation-for="Property.MarketValue" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

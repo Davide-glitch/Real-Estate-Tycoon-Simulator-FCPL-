@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to EstateArchitect</h1>
+    <p class="lead">Manage properties quickly using Razor Pages and EF Core.</p>
+    <p>
+        <a class="btn btn-primary btn-lg" asp-page="/Index">View Properties</a>
+    </p>
+</div>

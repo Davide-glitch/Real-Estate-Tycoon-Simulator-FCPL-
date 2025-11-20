@@ -1,0 +1,26 @@
+using DavidEstateArchitect.Data;
+using DavidEstateArchitect.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace DavidEstateArchitect.Pages
+{
+    public class DetailsModel : PageModel
+    {
+        private readonly AppDbContext _db;
+        public DetailsModel(AppDbContext db) => _db = db;
+
+        public Property Property { get; set; } = new();
+
+        public async Task<IActionResult> OnGetAsync(int id)
+        {
+            var entity = await _db.Properties.FindAsync(id);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+            Property = entity;
+            return Page();
+        }
+    }
+}

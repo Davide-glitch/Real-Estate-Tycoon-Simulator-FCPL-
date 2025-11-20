@@ -1,0 +1,4 @@
+﻿@using EstateArchitect
+@using EstateArchitect.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@namespace EstateArchitect.Pages

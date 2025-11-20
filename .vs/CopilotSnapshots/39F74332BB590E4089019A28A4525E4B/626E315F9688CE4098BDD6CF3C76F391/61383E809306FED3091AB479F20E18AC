@@ -1,0 +1,42 @@
+﻿@page
+@model EstateArchitect.Pages.IndexModel
+@{
+    ViewData["Title"] = "Properties";
+}
+
+<h1 class="display-5 mb-3">Properties</h1>
+<p>
+    <a class="btn btn-primary" asp-page="Create">Add Property</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Beds</th>
+            <th>Baths</th>
+            <th>Sq Ft</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Properties)
+    {
+        <tr>
+            <td>@item.Address</td>
+            <td>@item.City</td>
+            <td>@item.Price.ToString("C0")</td>
+            <td>@item.Bedrooms</td>
+            <td>@item.Bathrooms</td>
+            <td>@item.SquareFeet</td>
+            <td>
+                <a class="btn btn-sm btn-secondary" asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@item.Id">Details</a>
+                <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

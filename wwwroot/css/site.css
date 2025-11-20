@@ -1,0 +1,418 @@
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Make buttons work */
+button, .btn {
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  opacity: 0.9;
+}
+
+/* Smooth hover effects for cards */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 1.5rem 4rem rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Navbar styling */
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+/* Button animations with bounce */
+.btn {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-light {
+  background: white;
+  color: #667eea;
+}
+
+.btn-light:hover {
+  background: #f8f9fa;
+  color: #764ba2;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+  color: white;
+}
+
+/* Hero section animation */
+.hero-section {
+  animation: fadeInUp 0.8s ease-out;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Feature icons with pulse effect */
+.feature-icon {
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.hover-lift:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Card enhancements */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Table improvements */
+.table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.table thead th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+  transform: scale(1.01);
+}
+
+/* Badge styling */
+.badge {
+  padding: 0.5em 0.85em;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Form controls */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Property cards with gradient borders */
+.property-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #667eea, #764ba2) border-box;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Status badges with glow */
+.status-badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Game header statistics */
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* Action buttons enhanced */
+.action-btn {
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.action-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.action-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Market event banner */
+.market-event-banner {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 20px rgba(240, 147, 251, 0.4);
+  animation: slideInDown 0.5s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bars */
+.progress-bar-animated {
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  background-size: 200% 100%;
+  animation: progressGradient 2s ease infinite;
+}
+
+@keyframes progressGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Tooltips enhancement */
+[title] {
+  position: relative;
+  cursor: help;
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Alert messages with icons */
+.alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Loading spinner */
+.spinner-border {
+  border-width: 3px;
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #764ba2, #667eea);
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Footer */
+.footer {
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* Smooth page transitions */
+main {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

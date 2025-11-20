@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace EstateArchitect.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Models.Property> Properties { get; set; } = default!;
+        // Add simulator entities
+        public DbSet<EstateArchitect.Models.GameState> GameStates { get; set; } = default!;
+        public DbSet<EstateArchitect.Models.Person> People { get; set; } = default!;
+        public DbSet<EstateArchitect.Models.RentalContract> RentalContracts { get; set; } = default!;
+    }
+}
