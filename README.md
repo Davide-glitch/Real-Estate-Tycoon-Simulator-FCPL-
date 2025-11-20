@@ -1,5 +1,6 @@
 # Real Estate Tycoon Simulator (FCPL)
 
+Use ./start.bat to run the project.
 A real-estate management and tycoon simulator built in C#/.NET. You start with a small balance and grow your net worth by buying, renting, and selling properties while managing taxes, maintenance, loans, and market events.
 
 ## Tech Stack
